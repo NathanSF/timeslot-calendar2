@@ -78,7 +78,7 @@ var header = {
 
 // TODO: Find correct way to instantiate ember calendar so we don't need timeout
 setTimeout(function(){
-    $('#event-calendar').fullCalendar({
+    Ember.$('#event-calendar').fullCalendar({
         header: header,
         events: events
     });
