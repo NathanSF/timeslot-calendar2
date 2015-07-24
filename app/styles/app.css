@@ -1,0 +1,12 @@
+/* Basic page styles */
+
+.title {
+    text-align: center;
+}
+
+/* Calendar overrides */
+.fc {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
