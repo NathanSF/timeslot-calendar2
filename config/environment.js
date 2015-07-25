@@ -2,6 +2,11 @@
 
 module.exports = function(environment) {
   var ENV = {
+    // Added to fix CSS warnings in console
+    contentSecurityPolicy: {
+      'style-src': "'self' 'unsafe-inline' use.typekit.net",
+    },
+
     modulePrefix: 'timeslot-cal2',
     environment: environment,
     baseURL: '/',
