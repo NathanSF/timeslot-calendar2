@@ -206,16 +206,22 @@ Ember.$.each(day3JSON.timeslots, function(index, val) {
 var header = {
     left: 'title',
     center: '',
-    right: 'today prev,next, month, agendaDay'
+    right: 'prev,next, agendaDay, agendaWeek'
 };
+
+// TODO: read this from day 1 json file
+var defaultDate = "2015-06-01T09:00:00-07:00";
 
 // TODO: Find correct way to instantiate ember calendar so we don't need timeout
 setTimeout(function(){
     Ember.$('#event-calendar').fullCalendar({
         header: header,
         events: events,
-        allDaySlot: false
+        allDaySlot: false,
+        defaultDate: defaultDate,
+        defaultView: "agendaDay",
+        editable: true
     });
-}, 1000);
+}, 500);
 
 export default App;
